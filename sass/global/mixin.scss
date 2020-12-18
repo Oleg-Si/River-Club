@@ -1,0 +1,30 @@
+@mixin reset-ul() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin frame() {
+  max-width: $page-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container() {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1320px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media ($sm-desktop-width) {
+    width: 85%;
+    padding: 0;
+  }
+}

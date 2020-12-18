@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <!-- End Fonts -->
+
+    <!-- Flatpickr  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- End Flatpickr  -->
+
+    <link href="css/style.min.css" rel="stylesheet">
+    <title>River Club</title>
+  </head>
+  <body>
+
+    <header class="header">
+      <div class="header__wrapper">
+        <a href="/" class="logo">
+          <svg>
+            <use xlink:href="img/svg/sprite.symbol.svg#logo"></use>
+          </svg>
+        </a>
+
+        <div class="header__container">
+          <a class="header__btn-close">
+            <img src="img/icons/icon-cross.svg" alt="">
+          </a>
+
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item menu__item_submenu">
+                <a href="#">Агроусадьба Беларуси</a>
+                <ul class="menu__list  menu__submenu">
+                  <li class="menu__item"><a href="#">Деревянные дома</a></li>
+                  <li class="menu__item"><a href="#">Заповедная территория</a></li>
+                  <li class="menu__item"><a href="#">Русская баня</a></li>
+                  <li class="menu__item"><a href="#">Пристань с катерами</a></li>
+                  <li class="menu__item"><a href="#">Отдых на любой вкус</a></li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a href="#">Комфортные условия</a>
+              </li>
+              <li class="menu__item">
+                <a href="#">Стоимость проживания</a>
+              </li>
+              <li class="menu__item">
+                <a href="#">Фотогаллерея</a>
+              </li>
+              <li class="menu__item">
+                <a href="#">Экскурсии</a>
+              </li>
+              <li class="menu__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__location">
+            <p class="header__location-title">Гомельская область,</p>
+            <p class="header__location-descr">Петриковский район, деревня Новоселки, улица Набережная 62, агроусадьба "River Club"</p>
+          </div>
+        </div>
+
+        <a class="header__btn-open">
+          <img src="img/icons/icon-burger.svg" alt="">
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="promo">
+        <div class="promo__wrapper">
+          <h1><span>Клубный отдых</span> в закрытом комплексе</h1>
+
+          <p class="promo__description svg-icons--promo-arrow">На берегу реки <br> в экологически чистом районе <br> Республики Беларусь.</p>
+
+          <a href="#" class="btn btn_screen_mobile promo__btn">Забронировать</a>
+        </div>
+      </section>
+
+      <section class="reservation">
+        <div class="reservation__wrapper">
+          <h2>Забронировать</h2>
+           <div class="reservation__content">
+            <div class="reservation__block">
+              <label class="reservation__form-title" for="reservation-date-in">Дата заезда</label>
+              <input  class="reservation__form-date" type="text" id="reservation-date-in" placeholder="15.07.2020">
+            </div>
+
+            <div class="reservation__block">
+              <label class="reservation__form-title" for="reservation-date-out">Дата отъезда</label>
+              <input class="reservation__form-date" type="text" id="reservation-date-out" placeholder="16.07.2020">
+            </div>
+
+            <div class="reservation__type">
+              <p class="reservation__form-title">Тип жилья</p>
+
+              <div class="reservation__type-block">
+                <input type="radio" name="reservation-type" id="reservation-type-1" value="Домик семейного типа" checked>
+                <label for="reservation-type-1">Домик семейного типа</label>
+              </div>
+
+              <div class="reservation__type-block">
+                <input type="radio" name="reservation-type" id="reservation-type-2" value="Гостевая комната">
+                <label for="reservation-type-2">Гостевая комната</label>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn_small reservation__calculate">Рассчитать сумму</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about__wrapper">
+          <div class="about__img">
+            <img src="img/house.png" srcset="img/house@2x.png 2x" alt="">
+          </div>
+          <div class="about__content">
+            <img src="img/icon-house.svg" alt="" class="about__content-img about__content-img_1">
+            <div class="about__description">
+              <h3>Деревянные дома</h3>
+              <p>Дома из сруба построенны по старинной технологии. Общая площадь 38 кв. м.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about__wrapper about__wrapper_invert">
+          <div class="about__img">
+            <img src="img/reserve.png" srcset="img/reserve@2x.png 2x" alt="">
+          </div>
+          <div class="about__content">
+            <img src="img/icon-reserve.svg" alt="" class="about__content-img about__content-img_2">
+            <div class="about__description">
+              <h3>Заповедная территория</h3>
+              <p>С девственными лесами на берегу реки Припять</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about__wrapper">
+          <div class="about__img">
+            <img src="img/bath.png" srcset="img/bath@2x.png 2x" alt="">
+          </div>
+          <div class="about__content">
+            <img src="img/icon-bath.svg" alt="" class="about__content-img about__content-img_3">
+            <div class="about__description">
+              <h3>Русская баня</h3>
+              <p>C бочкой ледяной воды и веником из отборных пород деревьев</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about__wrapper about__wrapper_invert">
+          <div class="about__img">
+            <img src="img/boat.png" srcset="img/boat@2x.png 2x" alt="">
+          </div>
+          <div class="about__content">
+            <img src="img/icon-boat.svg" alt="" class="about__content-img about__content-img_4">
+            <div class="about__description">
+              <h3>Катер в аренду</h3>
+              <p>У нас есть пристань с катерами, которые можно арендовать.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="services__wrapper">
+          <h2>Отдых на любой вкус</h2>
+          <div class="services__items">
+            <div class="services__item">
+              <img src="img/services-1.jpg" alt="" srcset="img/services-1@2x.jpg 2x">
+              <div class="services__item-content">
+                <h4>Барбекю зона</h4>
+                <p>Шашлыки и барбекю в приватной зоне на открытом воздухе</p>
+              </div>
+            </div>
+            <div class="services__item">
+              <img src="img/services-2.jpg" alt="" srcset="img/services-2@2x.jpg 2x">
+              <div class="services__item-content">
+                <h4>Частный пляж</h4>
+                <p>Отдых на частном пляже берега реки в 5 метрах от комплекса</p>
+              </div>
+            </div>
+            <div class="services__item">
+              <img src="img/services-3.jpg" alt="" srcset="img/services-3@2x.jpg 2x">
+              <div class="services__item-content">
+                <h4>Ужин в номер</h4>
+                <p>От нашего шеф-повара</p>
+              </div>
+            </div>
+            <div class="services__item">
+              <img src="img/services-4.jpg" alt="" srcset="img/services-4@2x.jpg 2x">
+              <div class="services__item-content">
+                <h4>Экскурсии</h4>
+                <p>В Музей деда Талаша, Краеведческий музей и национальный парк «Припять»</p>
+              </div>
+            </div>
+            <div class="services__item">
+              <img src="img/services-5.jpg" alt="" srcset="img/services-5@2x.jpg 2x">
+              <div class="services__item-content">
+                <h4>Охотничьи угодья</h4>
+                <p>Охота на кабанов, лосей, диких уток, касуль и зайцев в ближайших охотничьих угодьях</p>
+              </div>
+            </div>
+            <div class="services__item">
+              <img src="img/services-6.jpg" alt="" srcset="img/services-6@2x.jpg 2x">
+              <div class="services__item-content">
+                <h4>Рыбалка</h4>
+                <p>Рыбалка на берегу реки в 5 метрах от гостиничного комплекса или с катера</p>
+              </div>
+            </div>
+            <div class="services__item">
+              <img src="img/services-7.jpg" alt="" srcset="img/services-7@2x.jpg 2x">
+              <div class="services__item-content">
+                <h4>Банкетный зал</h4>
+                <p>Использование банкетных залов открытого и закрытого типа для важных мероприятий</p>
+              </div>
+            </div>
+            <div class="services__item">
+              <img src="img/services-8.jpg" alt="" srcset="img/services-8@2x.jpg 2x">
+              <div class="services__item-content">
+                <h4>Квадроциклы</h4>
+                <p>Катаниепо пересеченной местности</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="comfort">
+        <div class="comfort__wrapper">
+          <div class="comfort__text">
+            <h2>Комфортные условия</h2>
+            <p>Дома из сруба построенны по старинной технологии. Общая площадь 38 кв.м.</p>
+            <a href="#" class="btn btn_small">Забронировать</a>
+          </div>
+          <div class="comfort__list">
+            <ul>
+              <li><img src="img/icons/icon-bed.svg" alt="">Двухспальная кровать</li>
+              <li><img src="img/icons/icon-wifi.svg" alt="">Быстрый WIFI</li>
+              <li><img src="img/icons/icon-fireplace.svg" alt="">Личный камин</li>
+              <li><img src="img/icons/icon-conditioner.svg" alt="">Кондиционер</li>
+              <li><img src="img/icons/icon-table.svg" alt="">Рабочий стол</li>
+            </ul>
+
+            <ul>
+              <li><img src="img/icons/icon-bath.svg" alt="">Ванная комната</li>
+              <li><img src="img/icons/icon-shower.svg" alt="">Душевая кабина</li>
+              <li><img src="img/icons/icon-hot-water.svg" alt="">Горячая вода</li>
+              <li><img src="img/icons/icon-toilet.svg" alt="">Туалет</li>
+              <li><img src="img/icons/icon-terrace.svg" alt="">Терасса со столом</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comfort__photo">
+            <div class="comfort__track">
+              <img src="img/comfort-1.jpg" alt="" srcset="img/comfort-1@2x.jpg 2x">
+              <img src="img/comfort-2.jpg" alt="" srcset="img/comfort-2@2x.jpg 2x">
+              <img src="img/comfort-3.jpg" alt="" srcset="img/comfort-3@2x.jpg 2x">
+              <img src="img/comfort-4.jpg" alt="" srcset="img/comfort-4@2x.jpg 2x">
+            </div>
+          </div>
+      </section>
+
+      <section class="price">
+        <div class="price__container">
+          <h2>Стоимость проживания</h2>
+        </div>
+        <div class="price__wrapper">
+          <div class="price__inner">
+            <p class="price__form-title">Домик семейного типа</p>
+            <p class="price__form-descr"></p>
+            <div class="price__block">
+              <div class="price__block-container">
+                <p class="price__block-price">110 ₽</p>
+                <div class="price__block-text">
+                  <p>Сутки</p>
+                  <p>С воскресения до пятницы</p>
+                </div>
+              </div>
+              <ul class="price__date">
+                <li>ПН</li>
+                <li>ВТ</li>
+                <li>СР</li>
+                <li>ЧТ</li>
+                <li>ПТ</li>
+                <li class="price__date-active">СБ</li>
+                <li>ВС</li>
+              </ul>
+            </div>
+            <div class="price__inner">
+              <div class="price__block-container">
+                <p class="price__block-price">150 ₽</p>
+                <div class="price__block-text">
+                  <p>Сутки</p>
+                  <p>С пятницы до воскресения</p>
+                </div>
+              </div>
+              <ul class="price__date">
+                <li class="price__date-active">ПН</li>
+                <li class="price__date-active">ВТ</li>
+                <li class="price__date-active">СР</li>
+                <li class="price__date-active">ЧТ</li>
+                <li>ПТ</li>
+                <li>СБ</li>
+                <li>ВС</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="price__inner">
+            <p class="price__form-title">Гостевые комнаты</p>
+            <p class="price__form-descr">2 этаж большого дома</p>
+            <div class="price__block">
+              <div class="price__block-container">
+                <p class="price__block-price">110 ₽</p>
+                <div class="price__block-text">
+                  <p>Сутки</p>
+                  <p>С воскресения до пятницы</p>
+                </div>
+              </div>
+              <ul class="price__date">
+                <li>ПН</li>
+                <li>ВТ</li>
+                <li>СР</li>
+                <li>ЧТ</li>
+                <li>ПТ</li>
+                <li class="price__date-active">СБ</li>
+                <li>ВС</li>
+              </ul>
+            </div>
+            <div class="price__block">
+              <div class="price__block-container">
+                <p class="price__block-price">150 ₽</p>
+                <div class="price__block-text">
+                  <p>Сутки</p>
+                  <p>С пятницы до воскресения</p>
+                </div>
+              </div>
+              <ul class="price__date">
+                <li class="price__date-active">ПН</li>
+                <li class="price__date-active">ВТ</li>
+                <li class="price__date-active">СР</li>
+                <li class="price__date-active">ЧТ</li>
+                <li>ПТ</li>
+                <li>СБ</li>
+                <li>ВС</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="price__type">
+            <div class="price__type-container">
+              <div class="price__type-block">
+                <label class="price__type-title" for="price-date-in">Дата заезда</label>
+                <input  class="price__type-date" type="text" id="price-date-in" placeholder="15.07.2020">
+              </div>
+
+              <div class="price__type-block">
+                <label class="price__type-title" for="price-date-out">Дата отъезда</label>
+                <input class="price__type-date" type="text" id="price-date-out" placeholder="16.07.2020">
+              </div>
+            </div>
+
+            <div class="price__house">
+              <p class="price__type-title">Тип жилья</p>
+
+              <div class="price__house-block">
+                <input type="radio" name="price__house-type" id="price__house-type-1" value="Домик семейного типа" checked>
+                <label for="price__house-type-1">Домик семейного типа</label>
+              </div>
+
+              <div class="price__house-block">
+                <input type="radio" name="price__house-type" id="price__house-type-2" value="Гостевая комната">
+                <label for="price__house-type-2">Гостевая комната</label>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn_small price__calculate">Рассчитать сумму</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="gallery__wrapper">
+          <h2>Фотогалерея</h2>
+          <div class="gallery__static">
+            <img src="img/gallery-1.jpg" alt="">
+            <div class="gallery__static-container">
+              <div class="gallery__video">
+                <div class="gallery__video-info">
+                  <p>Видео-презентация</p>
+                   <a class="gallery__video-play"></a>
+                </div>
+                <video poster="img/gallery-2.jpg" playsinline src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"></video>
+              </div>
+              <img src="img/gallery-3.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery__slider">
+          <div class="gallery__track swiper-container">
+            <ul class="gallery__slides swiper-wrapper">
+              <li class="gallery__slide swiper-slide">
+                <img src="https://picsum.photos/264/306?1" alt="">
+              </li>
+              <li class="gallery__slide swiper-slide">
+                <img src="https://picsum.photos/264/306?2" alt="">
+              </li>
+              <li class="gallery__slide swiper-slide">
+                <img src="https://picsum.photos/264/306?3" alt="">
+              </li>
+              <li class="gallery__slide swiper-slide">
+                <img src="https://picsum.photos/264/306?4" alt="">
+              </li>
+              <li class="gallery__slide swiper-slide">
+                <img src="https://picsum.photos/264/306?5" alt="">
+              </li>
+              <li class="gallery__slide swiper-slide">
+                <img src="https://picsum.photos/264/306?6" alt="">
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-button swiper-button-next"></div>
+          <div class="swiper-button swiper-button-prev"></div>
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=L5zVtifGxQE&ab_channel=ThePrimeThanatos" class="gallery__link">Видео-презентация</a>
+      </section>
+
+      <section class="tours">
+        <div class="tours__wrapper">
+          <h2>Экскурсии</h2>
+          <div class="tours__content">
+            <div class="tours__map"></div>
+            <div class="tours__descriptions">
+              <div class="tours__description tours__description_active" data-id="1">
+                <div class="tours__text">
+                  <p class="tours__title">Музей деда Талаша</p>
+                  <p class="tours__descr">Музей национального героя Деда Талашаи партизанского движения на Петриковщине.</p>
+                </div>
+                <img src="img/tour-1.jpg" alt="">
+              </div>
+
+              <div class="tours__description" data-id="2">
+                <div class="tours__text">
+                  <p class="tours__title">Прогулка на катере</p>
+                  <p class="tours__descr">Музей национального героя Деда Талашаи партизанского движения на Петриковщине.</p>
+                </div>
+                <img src="img/tour-2.jpg" alt="">
+              </div>
+
+              <div class="tours__description" data-id="3">
+                <div class="tours__text">
+                  <p class="tours__title">Таинственный лес</p>
+                  <p class="tours__descr">Музей национального героя Деда Талашаи партизанского движения на Петриковщине.</p>
+                </div>
+                <img src="img/tour-3.jpg" alt="">
+              </div>
+
+              <div class="tours__description" data-id="4">
+                <div class="tours__text">
+                  <p class="tours__title">Охота на уток</p>
+                  <p class="tours__descr">Музей национального героя Деда Талашаи партизанского движения на Петриковщине.</p>
+                </div>
+                <img src="img/tour-4.jpg" alt="">
+              </div>
+
+              <div class="tours__description" data-id="5">
+                <div class="tours__text">
+                  <p class="tours__title">Графские развалины</p>
+                  <p class="tours__descr">Музей национального героя Деда Талашаи партизанского движения на Петриковщине.</p>
+                </div>
+                <img src="img/tour-5.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts__container">
+          <div class="contacts__wrapper">
+            <div class="contacts__text">
+              <h2>Контакты</h2>
+
+              <div class="contacts__item">
+                <p class="contacts__title"> Телефон</p>
+                <a href="tel:+375296500056" class="contacts__descr">+375 29 6500056</a>
+              </div>
+              <div class="contacts__item">
+                <p class="contacts__title">Email</p>
+                <a href="mailto:riverclub.by@gmail.com" class="contacts__descr">riverclub.by@gmail.com</a>
+              </div>
+              <div class="contacts__item">
+                <p class="contacts__title">Офис</p>
+                <address class="contacts__descr">246252, Республика Беларусь, Гомельская область, Петриковский район, деревня Новоселки, улица Набережная 62, Агро усадьба "River Club".</address>
+              </div>
+
+              <a href="#" class="btn btn_small contacts__mail">Написать нам</a>
+            </div>
+          </div>
+          <div class="contacts__map"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="logo">
+          <svg>
+            <use xlink:href="img/svg/sprite.symbol.svg#logo"></use>
+          </svg>
+        </div>
+
+        <div class="footer__social">
+          <a href="#">
+            <svg>
+              <use xlink:href="img/svg/sprite.symbol.svg#icons--icon-vkontakte"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg>
+              <use xlink:href="img/svg/sprite.symbol.svg#icons--icon-facebook"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg role="img">
+              <use xlink:href="img/svg/sprite.symbol.svg#icons--icon-instagram"></use>
+            </svg>
+          </a>
+
+          <p>Copyright © 2020 River Club</p>
+        </div>
+
+        <form action="#" class="footer__question">
+          <label for="subscribe">Ответим на ваши вопросы</label>
+          <div class="footer__question-input">
+            <input type="text" id="subscribe" name="subscribe" placeholder="Тел или Email">
+            <input type="submit" value="">
+          </div>
+        </form>
+      </div>
+    </footer>
+
+    <div class="overlay">
+      <div class="popup">
+        <div class="popup__wrapper">
+          <form action="mail.php" method="POST">
+            <a class="popup__close"><img src="img/icons/icon-cross-black.svg" alt=""></a>
+            <p class="popup__title">Оставьте заявку</p>
+            <p class="popup__descr">Мы вам перезвоним в ближайшее время!</p>
+
+            <div>
+              <div class="popup__block">
+                <input type="text" name="dateIn" placeholder="Дата заезда" readonly id="dateIn">
+                <input type="text" name="dateOut" placeholder="Дата отъезда" readonly id="dateOut">
+              </div>
+              <input type="text" name="price" placeholder="Стоимость" readonly id="price">
+              <input type="text" name="name" placeholder="Ваше имя" required id="name">
+              <input type="text" name="tel" placeholder="Ваш телефон" required id="tel">
+
+            </div>
+
+            <input type="submit" class="btn" value="Отправить">
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

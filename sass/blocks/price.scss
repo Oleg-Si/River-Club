@@ -1,0 +1,518 @@
+.price {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $color-three;
+  background-image:
+    url('../img/effect-bottom.png'),
+    url('../img/effect-top.png');
+
+  background-repeat: repeat-x;
+  background-size: 270%;
+  background-position: center -2px, center bottom;
+
+  @media ($retina),($retina2) {
+    background-image:
+      url('../img/effect-bottom@2x.png'),
+      url('../img/effect-top@2x.png');
+
+  }
+
+  &__wrapper {
+    @include container;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &__form {
+    &-title {
+      font-weight: bold;
+      font-size: 15.3958px;
+      line-height: 19px;
+    }
+
+    &-descr {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &__inner {
+    margin-bottom: 50px;
+  }
+
+  &__block {
+    margin-bottom: 20px;
+
+    &-price {
+      font-size: 35px;
+      line-height: 47px;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+
+      p {
+        margin: 0;
+        font-size: 11.5469px;
+        line-height: 14px;
+
+        &:first-child {
+          font-weight: bold;
+          font-size: 12.8298px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+
+  &__date {
+    @include reset-ul;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    li {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      margin-right: 18px;
+    }
+
+    &-active {
+      color: $color-main-active;
+    }
+  }
+
+  &__type {
+    margin-top: 50px;
+
+    &-container {
+      display: flex;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 12.8298px;
+      line-height: 16px;
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+
+    label.price__type-title {
+      margin-left: 5px;
+    }
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+
+      &.invalid {
+        border: 2px solid red;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-date {
+      background: #C4C4C4;
+      border-radius: 32px;
+      border: 0;
+      padding: 4px 10px;
+      max-width: 110px;
+      position: relative;
+      font-size: 12px;
+      line-height: 14px;
+      color: #000000;
+      min-height: 22px;
+      min-width: 110px;
+      -webkit-appearance: none;
+      appearance: none;
+
+      background-image: url('../../img/icons/icon-calendar.svg');
+      background-repeat: no-repeat;
+      background-position: 85px center;
+      background-size: 14px 14px;
+      cursor: pointer;
+
+      &.invalid {
+        border: 2px solid red;
+      }
+    }
+  }
+
+  &__house {
+    margin-top: 20px;
+    padding-left: 5px;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    label {
+      color: rgba(75, 75, 75, 0.4);
+      font-size: 12px;
+      line-height: 14px;
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked ~ label {
+      color: #000;
+    }
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+}
+@media ($mobile-width) {
+  .price {
+    background-size: 150%;
+
+    &__wrapper {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 400px;
+      padding-left: 50px;
+    }
+
+    &__form {
+      &-title {
+        font-size: 17px;
+        line-height: 22px;
+      }
+
+      &-descr {
+        font-size: 17px;
+        line-height: 22px;
+      }
+    }
+
+
+    &__block {
+      &-price {
+        font-size: 44px;
+        line-height: 49px;
+      }
+
+      &-text {
+        p {
+          font-size: 14px;
+          line-height: 17px;
+
+          &:first-child {
+            margin-bottom: 5px;
+            font-size: 15px;
+            line-height: 19px;
+          }
+        }
+      }
+    }
+
+    &__date {
+      li {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    &__type {
+      &-title {
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      label.price__type-title {
+        margin-left: 5px;
+      }
+
+      &-date {
+        padding: 5px 10px;
+        max-width: 130px;
+        font-size: 14px;
+        line-height: 18px;
+        background-position: 120px center;
+        min-height: 28px;
+        min-width: 150px;
+        margin-right: 20px;
+      }
+    }
+
+    &__house {
+      margin-top: 30px;
+
+      label {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    .btn {
+      margin-top: 30px;
+    }
+  }
+}
+@media ($tablet-width) {
+  .price {
+    background-size: 120%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media ($sm-desktop-width) {
+  .price {
+    background-size: 120%;
+
+    &__container {
+      @include container;
+    }
+
+    h2 {
+      text-align: left;
+    }
+
+    &__wrapper {
+      max-width: 1320px;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__inner {
+      margin-right: 40px;
+      margin-bottom: 0;
+
+      &:first-child {
+        .price__form-title {
+          margin-bottom: 45px;
+        }
+      }
+    }
+
+    &__form {
+      &-title {
+        font-size: 17px;
+        line-height: 22px;
+        margin-bottom: 5px;
+      }
+
+      &-descr {
+        margin-left: 20px;
+        margin-top: 0;
+      }
+    }
+  }
+}
+@media ($desktop-width) {
+  .price {
+    background-size: 100%;
+
+    &__wrapper {
+      justify-content: space-between;
+    }
+
+    &__type {
+      margin-top: 17px;
+
+      &-block {
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__inner {
+      margin-right: 0;
+    }
+  }
+}
+@media ($big-desktop-width) {
+  .price {
+    &__form {
+      &-title {
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+      &-descr {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+
+
+    &__block {
+      &-price {
+        font-size: 52px;
+        line-height: 49px;
+      }
+
+      &-text {
+        p {
+          font-size: 16px;
+          line-height: 18px;
+
+          &:first-child {
+            margin-bottom: 5px;
+            font-size: 17px;
+            line-height: 19px;
+          }
+        }
+      }
+    }
+
+    &__date {
+      padding-top: 20px;
+      padding-bottom: 25px;
+
+      li {
+        font-size: 16px;
+        line-height: 17px;
+      }
+    }
+
+    &__type {
+      &-title {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      &-date {
+        padding: 7px 13px;
+        max-width: 150px;
+        font-size: 15px;
+        line-height: 18px;
+        background-position: 120px center;
+
+      }
+    }
+
+    &__house {
+      margin-top: 50px;
+
+      label {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
+    .btn {
+      margin-top: 40px;
+    }
+  }
+}
+@media ($ex-desktop-width) {
+  .price {
+    padding-top: 160px;
+    padding-bottom: 150px;
+
+    &__form {
+      &-title {
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      &-descr {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+
+    &__inner {
+      &:first-child {
+        .price__form-title {
+          margin-bottom: 57px;
+        }
+      }
+    }
+
+    &__block {
+      &-price {
+        font-size: 60px;
+        line-height: 73px;
+      }
+
+      &-text {
+        p {
+          font-size: 18px;
+          line-height: 22px;
+
+          &:first-child {
+            margin-bottom: 5px;
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    &__date {
+      padding-top: 15px;
+      padding-bottom: 20px;
+
+      li {
+        font-size: 20px;
+        line-height: 24px;
+        margin-right: 25px;
+      }
+    }
+
+    &__type {
+      &-block {
+        &:first-child {
+          margin-right: 25px;
+        }
+      }
+
+      &-title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+
+      &-date {
+        padding: 7px 13px;
+        max-width: 170px;
+        font-size: 18px;
+        line-height: 21px;
+        background-position: 135px center;
+        background-size: 18px 18px;
+      }
+    }
+
+    &__house {
+      margin-top: 40px;
+
+      label {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    .btn {
+      margin-top: 60px;
+      width: 235px;
+    }
+  }
+}

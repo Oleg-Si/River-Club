@@ -1,0 +1,164 @@
+.contacts {
+  padding-top: 30px;
+  background-color: $color-secondary;
+
+  &__wrapper {
+    @include container;
+    color: #fff;
+  }
+
+  &__text {
+    h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    a.contacts__descr {
+      transition-duration: $animation-duration;
+
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  &__descr {
+    font-size: 10px;
+    line-height: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-style: normal;
+  }
+
+  &__mail {
+    display: block;
+    width: fit-content;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(50%);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__map {
+    background-image: url('../img/map.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 320px;
+  }
+}
+@media ($mobile-width) {
+  .contacts {
+    &__title {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &__descr {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+@media ($tablet-width) {
+  .contacts {
+    &__title {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__descr {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+@media ($sm-desktop-width) {
+  .contacts {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      @include container;
+    }
+
+    &__wrapper {
+      width: 30%;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__text {
+      h2 {
+        text-align: left;
+      }
+    }
+
+    &__item {
+      margin-bottom: 20px;
+    }
+
+    &__mail {
+      margin-left: 0;
+      transform: translateY(0);
+    }
+
+    &__map {
+      width: 50%;
+    }
+  }
+}
+@media ($desktop-width) {
+  .contacts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media ($big-desktop-width) {
+  .contacts {
+    padding-top: 160px;
+
+    &__text {
+      height: 100%;
+      max-width: 315px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    &__descr {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__map {
+      min-height: 725px;
+      max-width: 765px;
+      width: 60%;
+    }
+  }
+}
+@media ($ex-desktop-width) {
+
+}

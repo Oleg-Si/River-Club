@@ -1,0 +1,143 @@
+.reservation {
+  display: none;
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($sm-desktop-width) {
+  .reservation {
+    display: block;
+    margin: 50px;
+
+    &__wrapper {
+      @include container;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    &__content {
+      font-family: $font-nav;
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      align-items: flex-start;
+      width: 730px;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-between;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__type {
+      &-block {
+        label {
+          color: rgba(75, 75, 75, 0.4);
+          display: block;
+          margin-bottom: 5px;
+          cursor: pointer;
+        }
+
+        input {
+          display: none;
+        }
+
+        input:checked ~ label {
+          color: #000;
+        }
+      }
+    }
+
+    &__form-date {
+      background: #C4C4C4;
+      border-radius: 32px;
+      border: 0;
+      padding: 5px 13px;
+      max-width: 150px;
+      position: relative;
+
+      background-image: url('../../img/icons/icon-calendar.svg');
+      background-repeat: no-repeat;
+      background-position: 120px center;
+      background-size: 16px 16px;
+      cursor: pointer;
+
+      &.invalid {
+        border: 2px solid red;
+      }
+    }
+
+    label.reservation__form-title {
+      margin-left: 10px;
+    }
+
+    &__form-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .btn {
+      align-self: center;
+      margin-top: 8px;
+    }
+  }
+}
+@media ($desktop-width) {
+  .reservation {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    &__content {
+      font-size: 16px;
+      line-height: 20px;
+      width: 810px;
+    }
+
+    &__form-date {
+      padding: 6px 13px;
+    }
+  }
+}
+@media ($big-desktop-width) {
+  .reservation {
+    padding-top: 50px;
+    &__content {
+      font-size: 18px;
+      line-height: 21px;
+      width: 950px;
+    }
+
+    &__type {
+      &-block {
+        label {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    label.reservation__form-title {
+      margin-left: 13px;
+    }
+
+    &__form-date {
+      padding: 7px 13px;
+      max-width: 180px;
+      background-position: 145px center;
+      background-size: 18px 18px;
+    }
+
+    .btn {
+      align-self: center;
+      margin-top: 2px;
+    }
+  }
+}

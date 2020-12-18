@@ -1,0 +1,62 @@
+.btn {
+  display: inline-block;
+  padding: 9px 26px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 32px;
+  font-family: $font-main;
+  background-color: $color-main;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition-duration: $animation-duration;
+
+  &_small {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 5px 20px;
+  }
+
+  &:hover {
+    background-color: $color-main-active;
+  }
+}
+@media ($mobile-width) {
+  .btn {
+    &_small {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+@media ($tablet-width) {
+  .btn {
+    &_small {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 6px 22px;
+    }
+  }
+}
+
+@media ($desktop-width) {
+  .btn {
+    &_small {
+      font-size: 16px;
+      line-height: 18px;
+      padding: 7px 23px;
+    }
+  }
+}
+
+@media ($big-desktop-width) {
+  .btn {
+    &_small {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 8px 25px;
+    }
+  }
+}

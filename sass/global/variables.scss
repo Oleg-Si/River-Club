@@ -1,0 +1,35 @@
+/* ---------------------- Colors -------------------------- */
+$color-main: #F6E96D;
+$color-main-active: #ECCD2C;
+
+$color-secondary: #647761;
+
+$color-three: #fff2e3;
+
+/* --------------------- Fonts --------------------------- */
+
+$font-main: 'Montserrat', sans-serif;
+$font-nav: 'Roboto', sans-serif;
+$font-title: 'Amatic SC', cursive;
+$font-subtitle: 'Caveat', cursive;
+
+/* ------------------------------------------------ */
+
+$animation-duration: 0.3s;
+
+/* ------------------------------------------------ */
+
+$mobile-width: "min-width: 576px";
+$tablet-width: "min-width: 768px";
+$sm-desktop-width: "min-width: 992px";
+$desktop-width: "min-width: 1200px";
+$big-desktop-width: "min-width: 1440px";
+$ex-desktop-width: "min-width: 1600px";
+$full-desktop-width: "min-width: 1900px";
+
+$page-width: 1920px;
+
+/* --------------------- Resolution --------------------------- */
+
+$retina: "min-resolution: 144dpi";
+$retina2: "min-resolution: 1.5dppx";

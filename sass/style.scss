@@ -1,0 +1,28 @@
+@import '../node_modules/normalize-scss/sass/normalize/import-now'; // normalize
+
+@import "global/variables.scss"; // переменные
+
+@import "global/mixin.scss"; // миксины
+
+@import "global/scaffolding.scss"; // основа
+
+/* ---- Блоки ---- */
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/btn.scss";
+@import "blocks/menu.scss";
+@import "blocks/logo.scss";
+
+@import "blocks/promo.scss";
+@import "blocks/about.scss";
+@import "blocks/services.scss";
+@import "blocks/comfort.scss";
+@import "blocks/contacts.scss";
+@import "blocks/tours.scss";
+@import "blocks/gallery.scss";
+
+@import "../node_modules/swiper/swiper.scss"; // слайдер
+
+@import "blocks/reservation.scss";
+@import "blocks/price.scss";
+@import "blocks/popup.scss";

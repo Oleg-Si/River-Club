@@ -1,0 +1,195 @@
+.promo {
+  background-color: $color-secondary;
+  background-image:
+    url('../img/effect-top.png'),
+    url('../img/promo-bg.jpg');
+  background-repeat: repeat-x ,no-repeat;
+  background-size: 270%, cover;
+  background-position: -320px bottom, -370px bottom;
+
+  @media ($retina),($retina2) {
+    background-image:
+      url('../img/effect-top@2x.png'),
+      url("../img/promo-bg@2x.jpg");
+  }
+
+  &__wrapper {
+    min-height: 685px;
+    @include flex-center;
+    flex-direction: column;
+    opacity: 1;
+    transition-duration: $animation-duration;
+
+    &_hide {
+      opacity: 0;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    color: #fff;
+
+    span {
+      color: $color-main;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__description {
+    font-family: $font-subtitle;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    position: relative;
+    max-width: 280px;
+
+    &::after {
+      content: '';
+      width: 25px;
+      height: 35px;
+      position: absolute;
+      top: 80px;
+      right: -20px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../img/icons/promo-arrow.svg');
+    }
+  }
+
+  &__btn {
+    margin-top: 70px;
+    margin-bottom: -90px;
+  }
+}
+
+@media ($mobile-width) {
+  .promo {
+    background-size: 150%, cover;
+    background-position: center bottom, center bottom;
+  }
+}
+
+@media ($sm-desktop-width) {
+  .promo {
+    background-size: 120%, cover;
+
+    &__wrapper {
+      min-height: none;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      font-size: 26px;
+      line-height: 36px;
+      max-width: 450px;
+
+      &::after {
+        width: 36px;
+        height: 66px;
+        top: 60px;
+        right: 70px;
+      }
+
+      br {
+        display: none;
+      }
+    }
+
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+@media ($desktop-width) {
+  .promo {
+    background-size: 100%, cover;
+
+    h1 {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    &__description {
+      font-size: 32px;
+      line-height: 45px;
+      max-width: 550px;
+      margin-bottom: 0;
+
+      &::after {
+        width: 36px;
+        height: 66px;
+        top: 75px;
+        right: 100px;
+      }
+    }
+  }
+}
+
+@media ($big-desktop-width) {
+  .promo {
+    &__wrapper {
+      min-height: 755px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    &__description {
+      font-size: 32px;
+      line-height: 45px;
+      max-width: 550px;
+
+      &::after {
+        width: 36px;
+        height: 66px;
+        top: 75px;
+        right: 100px;
+      }
+    }
+  }
+}
+
+@media ($ex-desktop-width) {
+  .promo {
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      max-width: 700px;
+      font-size: 38px;
+      line-height: 55px;
+
+      &::after {
+        width: 36px;
+        height: 66px;
+        top: 95px;
+        right: 140px;
+      }
+    }
+  }
+}
+
+@media ($full-desktop-width) {
+  .promo {
+    h1 {
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+
+    &__description {
+      max-width: 700px;
+      font-size: 44px;
+      line-height: 55px;
+    }
+  }
+}
