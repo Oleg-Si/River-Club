@@ -14,7 +14,12 @@
     background-image:
       url('../img/effect-bottom@2x.webp'),
       url('../img/effect-top@2x.webp');
+  }
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    background-image:
+      url('../img/effect-bottom.png'),
+      url('../img/effect-top.png');
   }
 
   &__wrapper {

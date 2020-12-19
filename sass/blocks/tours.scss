@@ -12,6 +12,10 @@
     background-image: url('../img/effect-bottom@2x.webp');
   }
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    background-image: url('../img/effect-bottom.png');
+  }
+
   &__wrapper {
     @include container;
   }
@@ -63,6 +67,10 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      background-image: url('../img/map.jpg');
+    }
   }
 }
 @media ($mobile-width) {

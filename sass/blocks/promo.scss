@@ -13,6 +13,12 @@
       url("../img/promo-bg@2x.webp");
   }
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // ie
+    background-image:
+      url('../img/effect-top.png'),
+      url('../img/promo-bg.jpg');
+  }
+
   &__wrapper {
     min-height: 685px;
     @include flex-center;

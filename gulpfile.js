@@ -128,13 +128,13 @@ gulp.task('images', () => {
       })
     ]))
 
-    .pipe(gulp.dest(PATH.build.imagesMinify));
+    .pipe(gulp.dest(PATH.build.images));
 });
 
 gulp.task('webp', () => {
-  return gulp.src(PATH.watch.imagesMinify)
+  return gulp.src(PATH.watch.images)
     .pipe(webp({
-      quality: 50,
+      quality: 100,
       method: 6,
     }))
 

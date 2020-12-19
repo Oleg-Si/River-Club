@@ -59,6 +59,11 @@
     background-size: contain;
     background-repeat: no-repeat;
     min-height: 320px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      background-image: url('../img/map.jpg');
+    }
+
   }
 }
 @media ($mobile-width) {
