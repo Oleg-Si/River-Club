@@ -5,7 +5,7 @@ import {FlatpickrFn, Instance as FlatpickrInstance} from 'flatpickr/dist/types/i
 const flatpickr: FlatpickrFn = _flatpickr as any;
 import svg4everybody from 'svg4everybody';
 import {getNextDay, validateInput, getHumanDate, calculatePrice} from './functions';
-
+import {DESKTOP_WIDTH} from './constants';
 
 /*
 * Svg иконки
@@ -215,7 +215,7 @@ const subenuLink: HTMLLinkElement = document.querySelector('.menu__item_submenu'
 subenuLink.addEventListener('click', (e) => {
   e.preventDefault();
 
-  if (window.innerWidth < 992) {
+  if (window.innerWidth < DESKTOP_WIDTH) {
     if (!submenu.classList.contains('active')) {
       submenu.classList.add('active');
       submenu.style.height = 'auto';
@@ -240,8 +240,8 @@ subenuLink.addEventListener('click', (e) => {
 });
 
 // наведение на телефоне
-if (window.innerWidth >= 992) {
-  let timeout;
+if (window.innerWidth >= DESKTOP_WIDTH) {
+  let timeout: any;
 
   subenuLink.addEventListener('mouseenter', () => {
 
@@ -265,6 +265,7 @@ if (window.innerWidth >= 992) {
 /*
 * Слайдер фотогалереи
 */
+
 Swiper.use([Navigation]);
 
 const swiperParams: SwiperOptions = {
@@ -287,7 +288,22 @@ const swiperParams: SwiperOptions = {
   }
 };
 
-new Swiper('.swiper-container', swiperParams);
+let slider: any;
 
+if (window.innerWidth >= DESKTOP_WIDTH) {
+  slider = new Swiper('.swiper-container', swiperParams);
+}
+
+// Mutation Observer?
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= DESKTOP_WIDTH) {
+    if (!slider) {
+      slider = new Swiper('.swiper-container', swiperParams);
+    }
+  } else {
+    slider.destroy(true, true);
+    slider = null;
+  }
+})
 
 import './maps.ts';

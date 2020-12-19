@@ -1,3 +1,5 @@
+import {DESKTOP_WIDTH} from './constants';
+
 enum Days {
   FRIDAY = 5,
   SATURDAY = 6
@@ -19,7 +21,7 @@ export const getNextDay = (date: Date): Date => {
 export const validateInput = (input: HTMLInputElement): boolean => {
   if (input.value) {
 
-    if (window.innerWidth < 992) {
+    if (window.innerWidth < DESKTOP_WIDTH) {
       if (input.parentElement.classList.contains('invalid')) {
         input.parentElement.classList.remove('invalid');
       }
@@ -35,7 +37,7 @@ export const validateInput = (input: HTMLInputElement): boolean => {
 
 
   } else {
-    if (window.innerWidth < 992) {
+    if (window.innerWidth < DESKTOP_WIDTH) {
       input.parentElement.classList.add('invalid');
 
       return false;
