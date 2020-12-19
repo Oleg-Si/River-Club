@@ -3,13 +3,13 @@
   padding-bottom: 70px;
   padding-top: 40px;
 
-  background-image: url('../img/effect-bottom.png');
+  background-image: url('../img/effect-bottom.webp');
   background-repeat: repeat-x;
   background-size: 270%;
   background-position: center -2px;
 
   @media ($retina),($retina2) {
-    background-image: url('../img/effect-bottom@2x.png');
+    background-image: url('../img/effect-bottom@2x.webp');
   }
 
   &__wrapper {
@@ -59,7 +59,7 @@
 
   &__map {
     min-height: 275px;
-    background-image: url('../img/map.jpg');
+    background-image: url('../img/map.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

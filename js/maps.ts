@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import {Loader} from '@googlemaps/js-api-loader';
 
 interface Position {
@@ -49,19 +50,29 @@ const markers: Array<Marker> = [
 const createToursMarkers = (map: google.maps.Map, markers: Marker[] | Marker): void => {
   if (Array.isArray(markers)) {
     markers.forEach((el: Marker) => {
+      const image = {
+        url: el.icon,
+        scaledSize: new google.maps.Size(60, 60),
+      }
+
       const marker = new google.maps.Marker({
         position: el.position,
         map,
-        icon: el.icon,
+        icon: image,
         animation: google.maps.Animation.DROP,
       })
 
       if (el.iconActive) {
+        const imageActive = {
+          url: el.iconActive,
+          scaledSize: new google.maps.Size(65, 65),
+        }
+
         marker.addListener('mouseover', () => {
-          marker.setIcon(el.iconActive);
+          marker.setIcon(imageActive);
         })
         marker.addListener('mouseout', () => {
-          marker.setIcon(el.icon);
+          marker.setIcon(image);
         })
       }
 
@@ -72,26 +83,36 @@ const createToursMarkers = (map: google.maps.Map, markers: Marker[] | Marker): v
       }
     });
   } else {
+    const image = {
+      url: markers.icon,
+      scaledSize: new google.maps.Size(60, 60),
+    }
+
     const marker = new google.maps.Marker({
       position: markers.position,
       map,
-      icon: markers.icon,
+      icon: image,
       animation: google.maps.Animation.DROP,
     });
 
     if (markers.iconActive) {
+      const imageActive = {
+        url: markers.iconActive,
+        scaledSize: new google.maps.Size(65, 65),
+      }
+
       marker.addListener('mouseover', () => {
-        marker.setIcon(markers.iconActive)
+        marker.setIcon(imageActive)
       })
       marker.addListener('mouseout', () => {
-        marker.setIcon(markers.icon)
+        marker.setIcon(image)
       })
     }
   }
 };
 
 const tourMarkerClickHandler = (tourId: number): void => {
-  const descriptions = document.querySelectorAll('.tours__description');
+  const descriptions = Array.from(document.querySelectorAll('.tours__description')); //ie fix
 
   descriptions.forEach((el) => {
     el.classList.remove('tours__description_active');

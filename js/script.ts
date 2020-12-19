@@ -1,9 +1,9 @@
 import Swiper, {Navigation, SwiperOptions} from 'swiper';
 import * as _flatpickr from 'flatpickr';
 import {Russian} from "flatpickr/dist/l10n/ru.js"
-import {FlatpickrFn, Instance} from 'flatpickr/dist/types/instance';
+import {FlatpickrFn, Instance as FlatpickrInstance} from 'flatpickr/dist/types/instance';
 const flatpickr: FlatpickrFn = _flatpickr as any;
-import * as svg4everybody from 'svg4everybody';
+import svg4everybody from 'svg4everybody';
 import {getNextDay, validateInput, getHumanDate, calculatePrice} from './functions';
 
 
@@ -23,7 +23,7 @@ const today: Date = new Date();
 const tomorrow: Date = getNextDay(new Date());
 const mounth = new Date().setMonth(today.getMonth() + 1);
 
-const calendarDateIn: Instance =  flatpickr(dateInputsField, {
+const calendarDateIn: FlatpickrInstance =  flatpickr(dateInputsField, {
   locale: Russian,
   dateFormat: 'd.m.Y',
   minDate: today,
@@ -33,7 +33,7 @@ const calendarDateIn: Instance =  flatpickr(dateInputsField, {
   }
 })
 
-const calendarDateOut: Instance = flatpickr(dateOtputsField, {
+const calendarDateOut: FlatpickrInstance = flatpickr(dateOtputsField, {
   locale: Russian,
   dateFormat: 'd.m.Y',
   minDate: tomorrow,
@@ -43,7 +43,7 @@ const calendarDateOut: Instance = flatpickr(dateOtputsField, {
 const dateInputsFieldPrice: HTMLInputElement = document.querySelector('#price-date-in');
 const dateOtputsFieldPrice: HTMLInputElement = document.querySelector('#price-date-out');
 
-const calendarDateInPrice: Instance =  flatpickr(dateInputsFieldPrice, {
+const calendarDateInPrice: FlatpickrInstance =  flatpickr(dateInputsFieldPrice, {
   locale: Russian,
   dateFormat: 'd.m.Y',
   minDate: today,
@@ -53,7 +53,7 @@ const calendarDateInPrice: Instance =  flatpickr(dateInputsFieldPrice, {
   }
 })
 
-const calendarDateOutPrice: Instance = flatpickr(dateOtputsFieldPrice, {
+const calendarDateOutPrice: FlatpickrInstance = flatpickr(dateOtputsFieldPrice, {
   locale: Russian,
   dateFormat: 'd.m.Y',
   minDate: tomorrow,

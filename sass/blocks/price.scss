@@ -3,8 +3,8 @@
   padding-bottom: 60px;
   background-color: $color-three;
   background-image:
-    url('../img/effect-bottom.png'),
-    url('../img/effect-top.png');
+    url('../img/effect-bottom.webp'),
+    url('../img/effect-top.webp');
 
   background-repeat: repeat-x;
   background-size: 270%;
@@ -12,8 +12,8 @@
 
   @media ($retina),($retina2) {
     background-image:
-      url('../img/effect-bottom@2x.png'),
-      url('../img/effect-top@2x.png');
+      url('../img/effect-bottom@2x.webp'),
+      url('../img/effect-top@2x.webp');
 
   }
 

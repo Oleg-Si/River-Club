@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
 // const mqpacker = require('css-mqpacker');
 const del = require('del');
 const server = require('browser-sync').create();
@@ -38,13 +39,16 @@ const PATH = {
     html: '*.html',
     js: 'js/**/*.{js,ts}',
     php: '*.php',
-    images: 'img/**/*.{png,jpg,svg,ico,jpeg}'
+    images: 'img/**/*.{png,jpg,svg,ico,jpeg}',
+    vendor: 'vendor/**',
+    imagesMinify: 'images/**/*.{png,jpg,jpeg}'
   },
 
   build: {
     base: 'build',
     css: 'build/css',
     images: 'build/img',
+    imagesMinify: 'images',
     sprite: 'build/img/symbol/sprite.svg',
     js: './build/js/'
   }
@@ -91,18 +95,23 @@ gulp.task('php:copy', () => {
     .pipe(gulp.dest(PATH.build.base));
 });
 
-// copy
-gulp.task('copy', () => {
-  return gulp.src(PATH.watch.html,
-    {
-      base: '.',
-      allowEmpty: true
-    })
+gulp.task('vendor:copy', () => {
+  return gulp.src(PATH.watch.vendor, {
+    base: '.'
+  })
     .pipe(gulp.dest(PATH.build.base));
 });
 
+// copy
+gulp.task('copy', gulp.series('html:copy', 'php:copy', 'vendor:copy'))
+
 // clean
 gulp.task('clean', () => {
+  return del(PATH.build.base);
+});
+
+// clean optimized images
+gulp.task('cleanImages', () => {
   return del(PATH.build.base);
 });
 
@@ -118,6 +127,16 @@ gulp.task('images', () => {
         progressive: true
       })
     ]))
+
+    .pipe(gulp.dest(PATH.build.imagesMinify));
+});
+
+gulp.task('webp', () => {
+  return gulp.src(PATH.watch.imagesMinify)
+    .pipe(webp({
+      quality: 50,
+      method: 6,
+    }))
 
     .pipe(gulp.dest(PATH.build.images));
 });
@@ -180,8 +199,15 @@ gulp.task('scripts', () => {
         rules: [
           {
             test: /\.(js|ts)$/,
-            exclude: /(node_modules)/,
-            loaders: ['babel-loader', 'ts-loader']
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  '@babel/preset-env',
+                  '@babel/preset-typescript'
+                ],
+              }
+            }
           }
         ]
       },
@@ -211,9 +237,11 @@ gulp.task('js:update', gulp.series('scripts', 'server:reload'), (done) => {
 
 gulp.task('default', gulp.series(
   'clean',
+  'cleanImages',
   'copy',
-  'images',
-  'svg',
   'styles',
-  'scripts'
+  'scripts',
+  'images',
+  'webp',
+  'svg'
 ));
