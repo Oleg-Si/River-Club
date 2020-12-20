@@ -124,11 +124,7 @@
       max-height: 310px;
       overflow: hidden;
       margin-bottom: 20px;
-      background-image: url('../img/gallery-2.webp');
-
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        background-image: url('../img/gallery-2.jpg');
-      }
+      background-image: url('../img/gallery-2.jpg');
 
       video {
         display: block;

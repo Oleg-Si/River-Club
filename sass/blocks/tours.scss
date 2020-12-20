@@ -3,17 +3,13 @@
   padding-bottom: 70px;
   padding-top: 40px;
 
-  background-image: url('../img/effect-bottom.webp');
+  background-image: url('../img/effect-bottom.png');
   background-repeat: repeat-x;
   background-size: 270%;
   background-position: center -2px;
 
   @media ($retina),($retina2) {
-    background-image: url('../img/effect-bottom@2x.webp');
-  }
-
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    background-image: url('../img/effect-bottom.png');
+    background-image: url('../img/effect-bottom@2x.png');
   }
 
   &__wrapper {
@@ -35,9 +31,13 @@
       display: flex;
     }
 
-    img {
+    picture {
       display: block;
       width: 42%;
+    }
+
+    img {
+      display: block;
     }
   }
 
@@ -63,14 +63,10 @@
 
   &__map {
     min-height: 275px;
-    background-image: url('../img/map.webp');
+    background-image: url('../img/map.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      background-image: url('../img/map.jpg');
-    }
   }
 }
 @media ($mobile-width) {
@@ -85,6 +81,10 @@
     &__descr {
       font-size: 12px;
       line-height: 14px;
+    }
+
+    &__map {
+      min-height: 350px;
     }
   }
 }
@@ -136,7 +136,7 @@
       flex-direction: column-reverse;
       box-shadow: none;
 
-      img {
+      picture {
         display: block;
         width: 100%;
       }

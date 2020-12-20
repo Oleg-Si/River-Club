@@ -114,7 +114,7 @@ const createToursMarkers = (map: google.maps.Map, markers: Marker[] | Marker): v
 const tourMarkerClickHandler = (tourId: number): void => {
   const descriptions = Array.from(document.querySelectorAll('.tours__description')); //ie fix
 
-  descriptions.forEach((el) => {
+  descriptions.forEach((el: Element) => {
     el.classList.remove('tours__description_active');
   })
 

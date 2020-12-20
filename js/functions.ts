@@ -54,7 +54,8 @@ export const getHumanDate = (date: Date): string => {
   return date.toLocaleString('ru-ru', {
     year: 'numeric',
     month: '2-digit',
-    day: '2-digit'});
+    day: '2-digit'}
+  );
 }
 
 // Рассчитывает стоимость

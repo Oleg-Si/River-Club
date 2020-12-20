@@ -62,7 +62,12 @@
     padding-left: 10px;
 
     img {
-      width: 255px;
+      display: block;
+    }
+
+    picture {
+      display: flex;
+      min-width: 255px;
       padding-left: 10px;
       padding-right: 10px;
 
@@ -125,6 +130,12 @@
         }
       }
     }
+
+    picture {
+      &:last-child {
+        padding-right: 20px;
+      }
+    }
   }
 }
 
@@ -185,13 +196,15 @@
     &__photo {
       overflow: visible;
       @include container;
+      padding-right: 0;
     }
 
     &__track {
       overflow-x: visible;
       padding-left: 0px;
 
-      img {
+      picture {
+        min-width: auto;
         width: 24%;
         padding-left: 0;
         padding-right: 0;
